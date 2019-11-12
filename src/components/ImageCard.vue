@@ -1,14 +1,15 @@
 <template>
+
   <div class="movie_card">
     <div class="movie_card_image">
-      <img :src="movieDetails.Url" :alt="movieDetails.Name+movieDetails.Type">
+      <img :src="movieDetails.Url" :alt="movieDetails.Name+movieDetails.id">
     </div>
     <div class="movie_card_content">
       <h3>{{ movieDetails.Name }}</h3>
       <p>{{ movieDetails.Type }}</p>
       <div class="d-flex">
         <button @click="viewItem">View</button>
-        <button>Edit</button>
+        <button @click="editItem">Edit</button>
         <button @click="deleteItem">Delete</button>
       </div>
     </div>
@@ -36,6 +37,9 @@ export default {
     },
     viewItem() {
       this.$router.push({name: 'view-movie', params: { id: this.movieDetails.id}})
+    },
+    editItem() {
+      this.$router.push({name: 'edit-movie', params: { id: this.movieDetails.id}})
     }
   }
 }
