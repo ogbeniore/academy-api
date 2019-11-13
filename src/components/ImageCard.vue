@@ -27,12 +27,12 @@ export default {
       this.$http.delete(`http://localhost:3000/movies/${this.movieDetails.id}`)
         .then(response => {
           alert('Movie Deleted Successfully')
-          console.log(response)
+          alert(response)
           this.$emit('reload')
         })
         .catch(error => {
           alert('Error Deleting Movie')
-          console.log(error.response)
+          alert(error.response)
         })
     },
     viewItem() {

@@ -35,7 +35,7 @@ export default {
         this.movieList = response.data
       })
       .catch(error => {
-        console.log(error.response)
+       alert(error.response)
       })
     }
   }

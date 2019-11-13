@@ -43,7 +43,7 @@ export default {
       })
       .catch(error => {
         alert('Error loading Movie')
-        console.log(error.response)
+        alert(error.response)
       })
   },
   methods: {
